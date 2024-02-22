@@ -1,0 +1,11 @@
+--- evolution-3.46.4.orig/src/e-util/e-markdown-editor.c	2023-02-10 08:18:14.000000000 +0100
++++ evolution-3.46.4/src/e-util/e-markdown-editor.c	2024-02-07 16:28:11.189555914 +0100
+@@ -848,7 +848,7 @@
+ 		editor_mode = E_CONTENT_EDITOR_MODE_PLAIN_TEXT;
+ 	}
+ 
+-	if (content && *content && editor_mode == E_CONTENT_EDITOR_MODE_PLAIN_TEXT) {
++	if (content && *content && editor_mode == E_CONTENT_EDITOR_MODE_PLAIN_TEXT && false) {
+ 		gchar *tmp;
+ 
+ 		tmp = g_strconcat ("```\n", content,

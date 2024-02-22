@@ -1,0 +1,13 @@
+diff -ru evolution-3.46.4.orig/src/mail/message-list.c evolution-3.46.4/src/mail/message-list.c
+--- evolution-3.46.4.orig/src/mail/message-list.c	2023-02-10 08:18:14.000000000 +0100
++++ evolution-3.46.4/src/mail/message-list.c	2024-02-06 15:16:11.847145729 +0100
+@@ -1235,7 +1235,7 @@
+ 
+ 		regen_data_unref (regen_data);
+ 
+-	} else if (with_fallback) {
++	} else if (with_fallback && false) {
+ 		if (node == NULL && priv->oldest_unread_uid != NULL)
+ 			node = g_hash_table_lookup (
+ 				uid_nodemap, priv->oldest_unread_uid);
+Nur in evolution-3.46.4/src/modules/mail: em-composer-prefs.c.orig.

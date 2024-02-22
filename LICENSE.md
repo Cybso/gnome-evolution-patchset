@@ -1,0 +1,1 @@
+As _Evolution is available under a variety of licenses_ (https://gitlab.gnome.org/GNOME/evolution/-/blob/master/COPYING)[https://gitlab.gnome.org/GNOME/evolution/-/blob/master/COPYING] the same applies to this patches.

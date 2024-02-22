@@ -1,0 +1,31 @@
+--- evolution-3.46.4.orig/src/addressbook/gui/contact-editor/e-contact-editor.c	2023-02-10 08:18:14.000000000 +0100
++++ evolution-3.46.4/src/addressbook/gui/contact-editor/e-contact-editor.c	2024-02-22 16:46:52.252135572 +0100
+@@ -4373,7 +4373,7 @@
+ 		GtkImage *preview;
+ 		GtkFileFilter *filter;
+ 
+-		if (e_util_is_running_flatpak ()) {
++		if (e_util_is_running_flatpak () || true) {
+ 			editor->priv->image_selector_native = gtk_file_chooser_native_new (
+ 				_("Please select an image for this contact"),
+ 				GTK_WINDOW (editor->priv->app),
+--- evolution-3.46.4.orig/src/e-util/e-attachment-store.c	2023-02-10 08:18:14.000000000 +0100
++++ evolution-3.46.4/src/e-util/e-attachment-store.c	2024-02-22 16:47:29.403602718 +0100
+@@ -651,7 +651,7 @@
+ 	g_return_if_fail (E_IS_ATTACHMENT_STORE (store));
+ 	g_return_if_fail (GTK_IS_WINDOW (parent));
+ 
+-	if (e_util_is_running_flatpak ()) {
++	if (e_util_is_running_flatpak () || true) {
+ 		native = gtk_file_chooser_native_new (
+ 			_("Add Attachment"), parent,
+ 			GTK_FILE_CHOOSER_ACTION_OPEN,
+@@ -842,7 +842,7 @@
+ 	else
+ 		action = GTK_FILE_CHOOSER_ACTION_SELECT_FOLDER;
+ 
+-	if (e_util_is_running_flatpak ()) {
++	if (e_util_is_running_flatpak () || true) {
+ 		native = gtk_file_chooser_native_new (
+ 			title, GTK_WINDOW (parent), action,
+ 			_("_Save"), _("_Cancel"));
