@@ -60,3 +60,9 @@ cd evolution-3.46.4 && for n in ../patches/*.patch; do patch -p1 < "$n"; done
 9. Install the required packages: `sudo dpkg -i evolution_*_amd64.deb evolution-common_*_all.deb evolution-plugins_*_amd64.deb libevolution_*_amd64.deb`
 
 Note that you have to repeat this for any new package version Debian provides.
+
+## Why don't you submit the patches upstream?
+
+I have done this for some changes, I only keep them in this repository until they have been incorporated into the Debian version.
+
+But in my experience, the Gnome developers are very reluctant to introduce new parameterizable options. The motto is "less is more". For this reason, I have no hope for some of my patches (e.g. the native dialog patch) to be adopted, especially since this is a very specific requirement. And the problem should actually be fixed in Portal. It is possible that this has already been done, the stable Debian version is of course a little older.
