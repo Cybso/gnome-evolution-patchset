@@ -6,7 +6,7 @@ My previous favorite, the KDE client Kontact, unfortunately only offers read acc
 
 There are several extensions for Thunderbird, but none of them really convinced me.
 
-Evolution, on the other hand, offered me excellent EWS integration including calendar right from the start.
+[Evolution](https://wiki.gnome.org/Apps/Evolution), on the other hand, offered me excellent EWS integration including calendar right from the start.
 
 However, in some places Evolution does not behave the way I prefer to work. That's why I maintain my own private patch set, which I apply to the current stable Debian version of the package (currently version 3.46.4).
 
